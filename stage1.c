@@ -57,14 +57,16 @@ int main(void) {
       scanf("%d %d %d",&a, &b, &c);
       if (b==7 && c==0)
         continue;
-      map[b][c].points = a; 
       if(a>0 && a<9){
+        map[b][c].points = a; 
         map[b][c].occupier = 'H';
       }
       else if (a>-9 && a<0){
+        map[b][c].points = a; 
         map[b][c].occupier = 'M';
       }
       else if (a==0){
+        map[b][c].points = a; 
         map[b][c].occupier = 'B';
       }
       else {
@@ -86,6 +88,9 @@ int main(void) {
       else if (command == 'q'){
         printf("Exiting Program!\n");
         game = 0;
+      }
+      else{
+        continue;
       }
     }
     
